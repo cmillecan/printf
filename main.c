@@ -7,8 +7,9 @@
 #include <stdio.h>
 int main()
 {
-	int total;
-	total = _printf("%\n");
-	printf("_printf returned %d\n", total);
+
+        _printf("Percent: [%%]\n");
+	printf("Percent: [%%]\n");
+
 	return (0);
 }

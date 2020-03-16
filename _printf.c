@@ -40,6 +40,10 @@ int _printf(const char *format, ...)
 					return (0);
 				}
 			}
+			if (format[i + 1] == '%')
+			{
+				i++;
+			}
 		}
 		total += _putchar(format[i]);
 	}

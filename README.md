@@ -1,3 +1,3 @@
 # printf
 
-test
+test, test

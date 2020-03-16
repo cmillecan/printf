@@ -32,3 +32,20 @@ int _putstring(char *str)
 
 	return (total);
 }
+/**
+ * is_valid - function
+ * Description: a funcion that checks if format is valid
+ * @fc: format character
+ * Return: 1 if fc is c, s
+ */
+int is_valid(const char fc)
+{
+	switch (fc)
+	{
+	case 'c':
+		return (1);
+	case 's':
+		return (1);
+	}
+	return (0);
+}

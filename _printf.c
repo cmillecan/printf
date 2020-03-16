@@ -21,13 +21,15 @@ int _printf(const char *format, ...)
 
 	va_start(opArgs, format);
 	total = 0;
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			switch (format[i])
+			if (is_valid(format[i + 1]))
 			{
+				i++;
+				switch (format[i])
+				{
 				case 'c':
 					total += _putchar(va_arg(opArgs, int));
 					continue;
@@ -36,11 +38,11 @@ int _printf(const char *format, ...)
 					continue;
 				default:
 					return (0);
+				}
 			}
 		}
 		total += _putchar(format[i]);
-		}
-
+	}
 	va_end(opArgs);
 
 	return (total);

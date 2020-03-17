@@ -7,9 +7,9 @@
 #include <stdio.h>
 int main()
 {
+	int len;
 
-        _printf("Percent: [%%]\n");
-	printf("Percent: [%%]\n");
-
+	len = _printf("he%so W%crld, I %s you\n","ll",'o' ,"love");
+	printf("length of the sting is %d long\n", len);
 	return (0);
 }

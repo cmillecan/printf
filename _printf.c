@@ -32,8 +32,10 @@ int _printf(const char *format, ...)
 				continue;
 			default:
 				return (0);
-				}
+			}
 		}
+		if (format[i + 1] == '%')
+			i++;
 		total += _putchar(format[i]);
 	}
 	va_end(opArgs);

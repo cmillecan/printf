@@ -8,6 +8,5 @@ int _putchar(char c);
 int _putstring(char *str);
 int is_valid(const char);
 int _putnum(int num);
-int get_spec(char fc, va_list param);
 
 #endif

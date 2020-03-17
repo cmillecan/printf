@@ -15,18 +15,14 @@ int _printf(const char *format, ...)
 	va_list opArgs;
 
 	if (format == NULL)
-	{
 		return (0);
-	}
 
 	va_start(opArgs, format);
 	total = 0;
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{
 			total += _putchar(format[i]);
-		}
 		if (format[i] == '%')
 		{
 			if (is_valid(format[i + 1]))

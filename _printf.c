@@ -37,9 +37,7 @@ int _printf(const char *format, ...)
 				}
 			}
 			if (format[i + 1] == '%')
-			{
 				i++;
-			}
 		}
 		total += _putchar(format[i]);
 	}

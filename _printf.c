@@ -21,8 +21,6 @@ int _printf(const char *format, ...)
 	total = 0;
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
-		if (format[i] != '%')
-			total += _putchar(format[i]);
 		if (format[i] == '%')
 		{
 			if (is_valid(format[i + 1]))
@@ -45,6 +43,7 @@ int _printf(const char *format, ...)
 				i++;
 			}
 		}
+		total += _putchar(format[i]);
 	}
 	va_end(opArgs);
 

@@ -7,6 +7,6 @@ int _printf(const char *, ...);
 int _putchar(char c);
 int _putstring(char *str);
 int is_valid(const char);
-int _putnum(int num);
+int _putnum(int n);
 
 #endif

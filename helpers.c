@@ -52,6 +52,61 @@ int is_valid(const char fc)
 		return (1);
 	case 's':
 		return (1);
+	case 'i':
+	case 'd':
+		return (1);
 	}
 	return (0);
+}
+
+/**
+* _pow_recursion - function
+* Description: a function that returns the value of x raised to the power of y
+* @x: base integer
+* @y: exponent
+* Return: x^y if y is lower than 0, then return -1
+*/
+int _pow_recursion(int x, int y)
+{
+	if (y < 0)
+	{
+		return (-1);
+	}
+	if (y > 0)
+	{
+		return (x * _pow_recursion(x, y - 1));
+	}
+	else
+	{
+		return (1);
+	}
+}
+
+/**
+* _putnum - prints a number
+* @n: integer
+* Return: int
+*/
+int _putnum(int n)
+{
+	int i, rem, temp, len = 0;
+
+	if (n < 0)
+	_putchar('-');
+
+	temp = n;
+	while (n != 0)
+	{
+		len++;
+		n /= 10;
+	}
+
+	for (i = len - 1; i >= 0; i--)
+	{
+		rem = temp / _pow_recursion(10, i);
+		putchar(rem + '0');
+		temp = temp - rem * _pow_recursion(10, i);
+	}
+
+	return (len);
 }

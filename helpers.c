@@ -52,6 +52,9 @@ int is_valid(const char fc)
 		return (1);
 	case 's':
 		return (1);
+	case 'i':
+	case 'd':
+		return (1);
 	}
 	return (0);
 }
@@ -76,8 +79,39 @@ int get_spec(char fc, va_list param)
 	case 's':
 		len = _putstring(va_arg(param, char *));
 		return (len);
+	case 'i':
+	case 'd':
+		len += _putnum(va_arg(param, int));
+		return (len);
 	default:
 		return (0);
 	}
 	return (0);
+}
+
+/**
+* _putnum - prints a number
+* @n: integer
+* Return: int
+*/
+int _putnum(int n)
+{
+	int i, rem, len = 0;
+	char *str;
+
+	str = malloc(sizeof(len));
+	while (n != 0)
+	{
+		len++;
+		n /= 10;
+	}
+	for (i = 0; i < len; i++)
+	{
+		rem = n % 10;
+		n = n / 10;
+		str[len - (i + 1)] = rem + '0';
+	}
+	str[len] = '\0';
+
+	return (len);
 }

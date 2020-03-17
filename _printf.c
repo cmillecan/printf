@@ -7,7 +7,6 @@
  * @format: character string
  * Return: number of characters printed
 */
-
 int _printf(const char *format, ...)
 {
 	int i, total;
@@ -24,8 +23,17 @@ int _printf(const char *format, ...)
 			if (is_valid(format[i + 1]))
 			{
 				i++;
-				total += get_spec(format[i], opArgs);
-				i++;
+				switch (format[i])
+				{
+				case 'c':
+					total += _putchar(va_arg(opArgs, int));
+					continue;
+				case 's':
+					total += _putstring(va_arg(opArgs, char *));
+					continue;
+				default:
+					return (0);
+				}
 			}
 			if (format[i + 1] == '%')
 				i++;

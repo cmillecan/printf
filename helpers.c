@@ -60,36 +60,6 @@ int is_valid(const char fc)
 }
 
 /**
- * get_spec - Function
- * Description: a function that finds specifer and print
- * @fc: format character
- * @param: variadic list to expand parameters
- * Return: number of characters
- */
-int get_spec(char fc, va_list param)
-{
-	int len;
-
-	len = 0;
-	switch (fc)
-	{
-	case 'c':
-		len = _putchar(va_arg(param, int));
-		return (len);
-	case 's':
-		len = _putstring(va_arg(param, char *));
-		return (len);
-	case 'i':
-	case 'd':
-		len += _putnum(va_arg(param, int));
-		return (len);
-	default:
-		return (0);
-	}
-	return (0);
-}
-
-/**
 * _putnum - prints a number
 * @n: integer
 * Return: int

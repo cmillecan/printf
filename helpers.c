@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -16,11 +17,16 @@ int _putchar(char c)
 /**
 * _putstring - prints a string
 * @str: is the string
-* Return: void
+* Return: int
 */
 int _putstring(char *str)
 {
 	int total;
+	
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
 
 	total = 0;
 	while (*str != '\0')
@@ -48,4 +54,31 @@ int is_valid(const char fc)
 		return (1);
 	}
 	return (0);
+}
+
+/**
+* _putnum - prints a number
+* @num: integer
+* Return: int
+*/
+int _putnum(int num)
+{
+	int i, rem, total = 0, n;
+	char *str;
+
+	n = num;
+	while (n != 0)
+	{
+		total++;
+		n /= 10;
+	}
+	for (i = 0; i < total; i++)
+	{
+		rem = num % 10;
+		num = num / 10;
+		str[total - (i + 1)] = rem + '0';
+	}
+	str[total] = '\0';
+
+	return (total);
 }

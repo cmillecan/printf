@@ -10,13 +10,11 @@
 
 int _printf(const char *format, ...)
 {
-	int i;
-	int total;
+	int i, total;
 	va_list opArgs;
 
 	if (format == NULL)
-		return (0);
-
+		return (-1);
 	va_start(opArgs, format);
 	total = 0;
 	for (i = 0; format && format[i] != '\0'; i++)

@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -21,6 +22,11 @@ int _putchar(char c)
 int _putstring(char *str)
 {
 	int total;
+	
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
 
 	total = 0;
 	while (*str != '\0')

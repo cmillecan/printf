@@ -21,18 +21,21 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (is_valid(format[i + 1]))
+			i++;
+			switch (format[i])
 			{
-				i++;
-				total += get_spec(format[i], opArgs);
-				i++;
-			}
-			if (format[i + 1] == '%')
-				i++;
+			case 'c':
+				total += _putchar(va_arg(opArgs, int));
+				continue;
+			case 's':
+				total += _putstring(va_arg(opArgs, char *));
+				continue;
+			default:
+				return (0);
+				}
 		}
 		total += _putchar(format[i]);
 	}
 	va_end(opArgs);
-
 	return (total);
 }

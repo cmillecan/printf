@@ -1,0 +1,26 @@
+.TH _printf 1
+.SH NAME
+_printf \- produces output according to a format
+.SH SYNOPSIS
+.B _printf
+int _printf(const char *format, ...){}
+.SH DESCRIPTION
+.B _printf
+writes output to the standard output stream and returns the number of characters printed.
+.TP
+.B format
+is the string that contains the text to be written to standard output. 
+.SH OPTIONS
+.TP
+.BR c
+Specifies a character.
+.TP
+.BR s
+Specifies a string of characters.
+.TP
+.BR d ", " i 
+Specifies a signed decimal integer.
+.SH AUTHOR
+Written by Constance Millecan and Daniel So.
+.SH SEE ALSO
+printf(3)

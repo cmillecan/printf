@@ -89,7 +89,8 @@ int _pow_recursion(int x, int y)
 int _putnum(int n)
 {
 	int i, rem, len = 0;
-	int digits, temp;
+	int digits;
+	unsigned int temp;
 
 	digits = 0;
 	if (n < 0)
@@ -98,6 +99,7 @@ int _putnum(int n)
 		len++;
 		n = -n;
 		temp = n;
+
 		while (n != 0)
 		{
 			len++;

@@ -92,8 +92,10 @@ int _putnum(int n)
 	int i, rem, temp, len = 0;
 
 	if (n < 0)
-	_putchar('-');
-
+	{
+		_putchar('-');
+		n = -1 * n;
+	}
 	temp = n;
 	while (n != 0)
 	{
@@ -104,7 +106,7 @@ int _putnum(int n)
 	for (i = len - 1; i >= 0; i--)
 	{
 		rem = temp / _pow_recursion(10, i);
-		putchar(rem + '0');
+		_putchar(rem + '0');
 		temp = temp - rem * _pow_recursion(10, i);
 	}
 

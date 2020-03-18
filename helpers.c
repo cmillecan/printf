@@ -89,40 +89,34 @@ int _pow_recursion(int x, int y)
 */
 int _putnum(int n)
 {
-	int i, rem, len = 0;
+	int i, len = 1;
 	int digits;
 	unsigned int temp;
 
-	digits = 0;
+	i = 0;
 	if (n < 0)
 	{
 		_putchar('-');
-		len++;
+		i++;
 		n = -n;
-		temp = n;
-
-		while (n != 0)
-		{
-			len++;
-			n /= 10;
-		}
-		digits = len - 2;
 	}
-	else
+	temp = n;
+	digits = 0;
+	while (temp > 0)
 	{
-		temp = n;
-		while (n != 0)
-		{
-			len++;
-			n /= 10;
-		}
-		digits = len - 1;
+		temp = temp / 10;
+		digits++;
 	}
-	for (i = digits; i >= 0; i--)
+	while (digits > 1)
 	{
-		rem = temp / _pow_recursion(10, i);
-		_putchar(rem + '0');
-		temp = temp - rem * _pow_recursion(10, i);
+		len = len * 10;
+		digits--;
 	}
-	return (len);
+	while (len > 0)
+	{
+		_putchar(((n / len) % 10) + '0');
+		i++;
+		len = len / 10;
+	}
+	return (i);
 }

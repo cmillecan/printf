@@ -15,7 +15,7 @@ int _printf(const char *format, ...);
 * d, i - Specifies a signed decimal integer
 
 ## Functions
-* **\_putchar**
+* **\_putchar** - writes the character to stdout
 * **\_putstring**
 * **is\_valid**
 * **\_putnum**

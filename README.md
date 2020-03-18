@@ -9,6 +9,10 @@ int _printf(const char *format, ...);
 ```
 **Format** is the string that contains the text to be written to standard output.
 
+**Syntax**
+```
+%[flags][width][.precision][size]type
+```
 ## Format Specifiers
 * **c** - Specifies a character
 * **s** - Specifies a string of characters
@@ -21,5 +25,5 @@ int _printf(const char *format, ...);
 * **\_putnum** - prints a number
 
 ## Authors
-* Constance Millecan
+* **[Constance Millecan](https://github.com/cmillecan)**
 * **[Daniel So](https://github.com/djso89)**

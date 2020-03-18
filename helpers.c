@@ -105,11 +105,6 @@ int _putnum(int n)
 		}
 		digits = len - 2;
 	}
-	else if (n == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
 	else
 	{
 		temp = n;

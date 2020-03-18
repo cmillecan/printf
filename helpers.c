@@ -101,7 +101,7 @@ int _putnum(int n)
 		n = -n;
 		temp = n;
 
-		while (n != 0)
+		while (n > 0)
 		{
 			len++;
 			n /= 10;
@@ -111,7 +111,7 @@ int _putnum(int n)
 	else
 	{
 		temp = n;
-		while (n != 0)
+		while (n > 0)
 		{
 			len++;
 			n /= 10;

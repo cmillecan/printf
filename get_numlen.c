@@ -8,9 +8,9 @@
 int get_numlen(int num)
 {
 	int numlen;
-	numlen = 0;
 
-        while (num != 0)
+	numlen = 0;
+	while (num != 0)
 	{
 		numlen++;
 		num /= 10;

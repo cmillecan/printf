@@ -96,32 +96,32 @@ int _putnum(int n)
 	digits = 0;
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		len++;
 		n = -n;
 		temp = n;
 
-	while (n != 0)
-	{
-		len++;
-		n /= 10;
-	}
+		while (n != 0)
+		{
+			len++;
+			n /= 10;
+		}
 		digits = len - 2;
 	}
 	else
 	{
 		temp = n;
-	while (n != 0)
-	{
-		len++;
-		n /= 10;
-	}
+		while (n != 0)
+		{
+			len++;
+			n /= 10;
+		}
 		digits = len - 1;
 	}
 	for (i = digits; i >= 0; i--)
 	{
 		rem = temp / _pow_recursion(10, i);
-		putchar(rem + '0');
+		_putchar(rem + '0');
 		temp = temp - rem * _pow_recursion(10, i);
 	}
 	return (len);

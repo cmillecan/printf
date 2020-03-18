@@ -9,7 +9,7 @@ int _printf(const char *format, ...);
 ```
 **Format** is the string that contains the text to be written to standard output.
 
-### Format Specifiers
+## Format Specifiers
 * c - Specifies a character
 * s - Specifies a string of characters
 * d, i - Specifies a signed decimal integer

@@ -16,9 +16,9 @@ int _printf(const char *format, ...);
 
 ## Functions
 * **\_putchar** - writes the character to stdout
-* **\_putstring**
-* **is\_valid**
-* **\_putnum**
+* **\_putstring** - prints a string
+* **is\_valid** - checks if format is valid
+* **\_putnum** - prints a number
 
 ## Authors
 * Constance Millecan

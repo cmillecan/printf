@@ -31,6 +31,10 @@ int _printf(const char *format, ...)
 				case 's':
 					total += _putstring(va_arg(opArgs, char *));
 					continue;
+				case 'd':
+				case 'i':
+					total += _putnum(va_arg(opArgs, int));
+					continue;
 				default:
 					return (0);
 				}

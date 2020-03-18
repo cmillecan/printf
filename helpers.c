@@ -104,13 +104,13 @@ int _putnum(int n)
 		len++;
 		n = -n;
 		temp = n;
-		len = get_numlen(n);
+		len += get_numlen(n);
 		digits = len - 2;
 	}
-        else
+	else
 	{
 		temp = n;
-	        len = get_numlen(n);
+		len = get_numlen(n);
 		digits = len - 1;
 	}
 	for (i = digits; i >= 0; i--)

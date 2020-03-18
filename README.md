@@ -15,9 +15,10 @@ int _printf(const char *format, ...);
 * d, i - Specifies a signed decimal integer
 
 ## Functions
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* **\_putchar**
+* **\_putstring**
+* **is\_valid**
+* **\_putnum**
 
 ## Authors
 * Constance Millecan

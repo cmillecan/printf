@@ -14,7 +14,7 @@ int _printf(const char *format, ...);
 * s - Specifies a string of characters
 * d, i - Specifies a signed decimal integer
 
-## Functions
+## [Functions](./helpers.c)
 * **\_putchar** - writes the character to stdout
 * **\_putstring** - prints a string
 * **is\_valid** - checks if format is valid
@@ -22,4 +22,4 @@ int _printf(const char *format, ...);
 
 ## Authors
 * Constance Millecan
-* Daniel So
+* **[Daniel So](https://github.com/djso89)**

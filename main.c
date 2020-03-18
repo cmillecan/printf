@@ -5,25 +5,21 @@
  */
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
-          int len;
-	  int len2;
-	  //unsigned int ui;
-	  //void *addr;
+	int len, len2;
+	len = printf("%d", 0);
 
-	  //len =
-		  _printf("Let's try to printf a simple sentence.\n");
-		  //len2 =
-		  printf("Let's try to printf a simple sentence.\n");
-	  //ui = (unsigned int)INT_MAX + 1024;
-	  //addr = (void *)0x7ffe637541f0;
-	  //_printf("Length:[%d, %i]\n", len, len);
-	  //  printf("Length:[%d, %i]\n", len2, len2);
-	  len = _printf("Negative:[%d]\n", 762534);
-	  len2 = printf("Negative:[%d]\n", 762534);
+	len2 = _printf("%d", 0);
 
-	  _printf("Length:[%d, %i]\n", len, len);
-	  printf("Length:[%d, %i]\n", len2, len2);
-	  return (0);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }

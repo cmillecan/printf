@@ -93,28 +93,24 @@ int _putnum(int n)
 	unsigned int temp;
 
 	digits = 0;
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	if (n < 0)
 	{
 		_putchar('-');
 		len++;
 		n = -n;
 		temp = n;
-
-		while (n != 0)
-		{
-			len++;
-			n /= 10;
-		}
+		len = get_numlen(n);
 		digits = len - 2;
 	}
-	else
+        else
 	{
 		temp = n;
-		while (n != 0)
-		{
-			len++;
-			n /= 10;
-		}
+	        len = get_numlen(n);
 		digits = len - 1;
 	}
 	for (i = digits; i >= 0; i--)
